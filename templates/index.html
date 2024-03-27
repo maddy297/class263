@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    h1 {
+        color: red;
+    }
+
+</style>
+</head>
+
+
+<body>
+    <h1>weather stats!</h1><br>
+    <form method="POST">
+        <label>Enter Location Coordinates</label><br><br>
+        <input placeholder="Latitude" name="latitude">
+        <input placeholder="Longitude" name="longitude">
+        <input type="submit">
+    </form>
+    
+    <center>
+        <table>
+            <tr><td colspan="2"><img src="{{ weather.data.condition.icon }}"></td></td></tr>
+            <tr><td>Place</td></tr>{{ weather.data.name}}</td></tr>
+            <tr><td>Region</td></tr>{{ weather.data.region}}</td></tr>
+            <tr><td>Country</td></tr>{{ weather.data.country}}</td></tr>
+            <tr><td>Condition</td></tr>{{ weather.data.condition.text}}</td></tr>
+            <tr><td>Temperature</td></tr>{{ weather.data.temp_c}}</td></tr>
+        </table>
+    </center>
+    <p>You have {{ count }} Visitors.</p>
+</body>
+</html>
